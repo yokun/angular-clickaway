@@ -1,7 +1,6 @@
 # folders
 # =======
 bower_components/
-dist/
 node_modules/
 
 # dot files

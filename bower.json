@@ -1,7 +1,17 @@
 {
 	"name": "clickaway",
+	"description": "Simple angular module that allows you to identify and execute provided method when you click away.",
 	"version": "0.1.0",
-	"dependencies": {
-
-	}
+	"dependencies": {},
+	"main": [
+		"dist/client/scripts/clickaway.js"
+	],
+	"ignore": [
+		"src",
+		".gitignore",
+		".npmignore",
+		"build-options.js",
+		"build.js",
+		"package.json"
+	]
 }
