@@ -8,12 +8,12 @@ angular.module('yo-clickaway').directive('yoClickaway', [
 		link = function(scope, iElement, iAttrs) {
 			var clickEventHandler, x;
 			//fire click away only when not clicked on same element
-			iElement.on('click', function(e) {				
+			iElement.on('click', function(e) {
 				var clickAwayCallback, lastElementClickedScope, ref, sameElementTriggered;
 				sameElementTriggered = iElement === lastElementClicked;
 				if (lastElementClicked && !sameElementTriggered) {
 					lastElementClickedScope = angular.element(lastElementClicked).scope();
-					clickAwayCallback = (ref = lastElementClicked[0]) != null ? ref.getAttribute("app-clickaway") : void 0;
+					clickAwayCallback = (ref = lastElementClicked[0]) != null ? ref.getAttribute("yo-clickaway") : void 0;
 					if (lastElementClickedScope) {
 						lastElementClickedScope.$eval(clickAwayCallback);
 					}
@@ -21,13 +21,13 @@ angular.module('yo-clickaway').directive('yoClickaway', [
 				lastElementClicked = iElement;
 				return e.stopPropagation();
 			});
-			clickEventHandler = function() {				
+			clickEventHandler = function() {
 				var clickAwayCallback;
-				clickAwayCallback = iAttrs.appClickaway;
+				clickAwayCallback = iAttrs.yoClickaway;
 				scope.$eval(clickAwayCallback);
 			};
 
-			//attach click handler on body		
+			//attach click handler on body
 			body.on('click', clickEventHandler);
 			x = scope.$on('$destroy', function() {
 				body.off('click', clickEventHandler);

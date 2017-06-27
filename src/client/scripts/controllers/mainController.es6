@@ -1,4 +1,4 @@
-angular.module('yo-clickaway').controller('MainCtrl',
+angular.module('yo-clickaway').controller('mainController',
 	['$scope',($scope) =>{
 		$scope.elmName = 'Judd'
 

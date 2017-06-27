@@ -4,6 +4,6 @@ angular.module('yo-clickaway').config ['$routeProvider', ($routeProvider) ->
 	$routeProvider
 		.when '/',
 			templateUrl: "views/home.html",
-			controller: "MainCtrl"
+			controller: "mainController"
 
 ]

@@ -4,7 +4,7 @@
 	"version": "0.1.0",
 	"dependencies": {},
 	"main": [
-		"dist/client/scripts/clickaway.js"
+		"dist/client/scripts/yo-clickaway.js"
 	],
 	"ignore": [
 		"src",

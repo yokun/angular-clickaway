@@ -1,0 +1,27 @@
+# rapid-build.cson
+# ================
+# common options for all build types
+common:
+	angular:
+		moduleName: 'yo-clickaway'
+	minify:
+		cacheBust: false
+		js:
+			fileName: 'yo-clickaway.js'
+ci:
+	exclude:
+		default:
+			client:
+				files: true
+			server:
+				files: true
+		from:
+			dist:
+				client: [
+					'views/**',
+					'styles/**',
+					'scripts/*/**',
+					'scripts/router.*',
+					'scripts/!clickaway.es6'
+
+				]
